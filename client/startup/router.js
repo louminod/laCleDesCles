@@ -6,3 +6,15 @@ FlowRouter.route('/', {
         BlazeLayout.render('layout', { main: 'lander' });
     }
 });
+
+FlowRouter.route('/apprendre', {
+    action() {
+        BlazeLayout.render('layout', { main: 'learn' });
+    }
+});
+
+FlowRouter.route('/entrainement', {
+    action() {
+        BlazeLayout.render('layout', { main: 'train' });
+    }
+});
