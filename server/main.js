@@ -1,5 +1,15 @@
 import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
+
+import './publications';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+});
+
+Accounts.onCreateUser((options, user) => {
+    if (options.profile) {
+        user.profile = options.profile;
+        user.profile.privilege = "user";
+    }
+    return user;
 });

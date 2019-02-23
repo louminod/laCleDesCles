@@ -1,0 +1,22 @@
+<template name="lander">
+    {{#if currentUser}}
+        {{> home}}
+    {{else}}
+        {{> logger}}
+    {{/if}}
+</template>
+
+<template name="logger">
+    <div class="row center" style="margin-top: 50px;">
+        <h4>La clé des clefs</h4>
+    </div>
+    <div class="row" style="margin-top: 50px;opacity: 0.9;">
+        <div class="card darken-1">
+            <div class="col s12 m12 center">
+                <div class="card-content center">
+                    {{> atForm}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
